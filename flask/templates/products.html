@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('products_view') }}">Products</a></li>
+            <li><a href="{{ url_for('orders_view') }}">Orders</a></li>
+        </ul>
+    </nav>
+    <h1>Products</h1>
+    <table>
+        <tr>
+            <th>Product ID</th>
+            <th>Name</th>
+            <th>Composition</th>
+            <th>Active</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.sudetis }}</td>
+            <td>{{ 'Yes' if product.active else 'No' }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

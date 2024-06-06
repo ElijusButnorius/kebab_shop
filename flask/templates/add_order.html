@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Order</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('products_view') }}">Products</a></li>
+            <li><a href="{{ url_for('orders_view') }}">Orders</a></li>
+        </ul>
+    </nav>
+    <h1>Add Order</h1>
+    <form method="POST" action="{{ url_for('add_order') }}">
+        <label for="product_id">Choose a kebab:</label>
+        <select id="product_id" name="product_id">
+            {% for product in products %}
+            <option value="{{ product.id }}">{{ product.name }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Add Order</button>
+    </form>
+</body>
+</html>

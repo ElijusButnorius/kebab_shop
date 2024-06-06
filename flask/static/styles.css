@@ -1,0 +1,131 @@
+/* Resetting some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Setting a clean and modern font */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: url("https://imageproxy.wolt.com/venue/621dc61c370126f2b7d996a9/7f301fe4-992e-11ec-a018-6a9f46ed54ee_0ddf2b98_d619_11ea_b7b6_3afc75d790c1_4.kebab_inn_menu_2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #343a40;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Styling the navigation bar */
+nav {
+    background-color: rgba(0, 123, 255, 0.9); /* Light blue background */
+    color: #fff;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3; /* Darker blue */
+    border-radius: 5px;
+}
+
+/* General heading styles */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling the table */
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007bff; /* Blue background */
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Styling buttons and links */
+a, button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #007bff; /* Blue background */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    text-align: center;
+}
+
+a:hover, button:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+/* Styling forms */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+label, select {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
